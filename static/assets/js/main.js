@@ -314,7 +314,7 @@ $('.team-box-slider').owlCarousel({
 
 // SLIDER //
 $('.team4-slider-area').owlCarousel({
-  loop:true,
+  loop:false,
   margin:30,
   nav:false,
   dots:true,

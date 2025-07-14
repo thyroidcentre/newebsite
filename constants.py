@@ -1,0 +1,10 @@
+class Constants:
+    EMAIL="thyroidcentre.in@gmail.com"
+    PHN="+91 9550056846"
+    ADDRESS="Apollo Hospital, Jubilee Hills, Hyderabad, Telangana 500033, India"
+    COMPANY_NAME = "ThyroidCenter"
+    facebook_url = "https://www.facebook.com/ThyroidCenter"
+    instagram_url = "https://www.instagram.com/ThyroidCenter"
+    linkeedin_url = "https://www.linkedin.com/company/thyroidcenter"
+    twitter_url = "https://twitter.com/ThyroidCenter"
+    email_1="samanthasathyakumar@thyroidcentre.in"

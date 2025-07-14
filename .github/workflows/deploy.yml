@@ -1,0 +1,40 @@
+name: FLASK THYROID DEPLOY
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Deploy to VPS via SSH
+      uses: appleboy/ssh-action@v1.0.3
+      with:
+        host: 193.203.160.121
+        username: root
+        password: ${{ secrets.VPS_ROOT_PASSWORD }}
+        port: 22
+        script: |
+          if [ ! -d "/home/docker/demo.thyroidcentre.in/.git" ]; then
+            rm -rf /home/docker/demo.thyroidcentre.in
+            mkdir -p ~/.ssh
+            ssh-keyscan github.com >> ~/.ssh/known_hosts
+            GIT_SSH_COMMAND='ssh -i ~/.ssh/github_deploy_key -o StrictHostKeyChecking=no' \
+              git clone git@github.com:thyroidcentre/newebsite.git /home/docker/demo.thyroidcentre.in
+          else
+            cd /home/docker/demo.thyroidcentre.in
+            GIT_SSH_COMMAND='ssh -i ~/.ssh/github_deploy_key -o StrictHostKeyChecking=no' \
+              git pull origin main
+          fi
+
+          cd /home/docker/demo.thyroidcentre.in
+
+          docker stop demo-flask_web || true
+          docker rm demo-flask_web || true
+
+          docker build -t demo-thyroid-web:latest .
+
+          docker run -d --name demo-flask_web -p 6000:6000 demo-thyroid-web:latest
