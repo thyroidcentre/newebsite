@@ -8,3 +8,4 @@ class Constants:
     linkeedin_url = "https://www.linkedin.com/company/thyroidcenter"
     twitter_url = "https://twitter.com/ThyroidCenter"
     email_1="samanthasathyakumar@thyroidcentre.in"
+    appointmentlink="https://calendar.app.google/tbL65d4DbbQkCBfMA"
