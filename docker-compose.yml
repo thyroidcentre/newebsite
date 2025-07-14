@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    container_name: demo-flask_web
+    ports:
+      - "5000:6000"  # Maps container port 5000 to host port 5000
+    restart: always  # Automatically restart on failure or reboot
+    environment:
+      - PYTHONUNBUFFERED=1  # Ensures logs appear immediately
