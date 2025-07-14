@@ -26,22 +26,28 @@ def goiter():
     return render_template('goiter.html') 
 @app.route('/services/graves/')
 def graves():
-    return render_template('service-right.html') 
+    return render_template('graves.html') 
 @app.route('/services/hyperparathyroidism/')
 def hyperparathyroidism():
-    return render_template('service-right.html') 
+    return render_template('hyperparathyroidism.html') 
 @app.route('/services/microwave-and-radiofrequency-ablation/')
 def microwave_and_radiofrequency_ablation():
-    return render_template('service-right.html') 
+    return render_template('microwave_and_radiofrequency_ablation.html') 
 @app.route('/services/thyroid-cancer/')
 def thyroid_cancer():
-    return render_template('service-right.html') 
+    return render_template('thyroid_cancer.html') 
 @app.route('/services/thyroid-surgery/')
 def thyroid_surgery():
-    return render_template('service-right.html') 
+    return render_template('thyroid_surgery.html') 
 @app.route('/services/toxic-nodule/')
 def toxic_nodule():
-    return render_template('service-right.html') 
+    return render_template('toxic_nodule.html')
+@app.route('/doctor/siddhartha-chakravarthy/')
+def siddhartha_chakravarthy():
+    return render_template('doctor1.html') 
+@app.route('/doctor/samantha-satyakumar/')
+def samantha_satyakumar():
+    return render_template('doctor2.html')  
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
