@@ -5,7 +5,7 @@ services:
     build: .
     container_name: demo-flask_web
     ports:
-      - "5000:6000"  # Maps container port 5000 to host port 5000
-    restart: always  # Automatically restart on failure or reboot
+      - "5000:6000"
+    restart: always
     environment:
-      - PYTHONUNBUFFERED=1  # Ensures logs appear immediately
+      - PYTHONUNBUFFERED=1
