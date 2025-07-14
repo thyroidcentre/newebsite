@@ -11,4 +11,4 @@ RUN pip install --upgrade pip && \
 
 COPY . .
 
-CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:6000", "app:app"]
+CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:5100", "app:app"]
