@@ -59,15 +59,55 @@
     <div class="row align-items-center">
       <div class="col-lg-6">
         <div class="about-images-area">
-          <div class="img1 image-anime reveal">
-            <img src="{{ url_for('static', filename='assets/img/all-images/about/about-img9.png') }}" alt="">
-          </div>
-          <div class="img2">
-            <img src="{{ url_for('static', filename='assets/img/elements/elements18.png') }}" alt=""
-              class="elements18 keyframe5">
+          <div id="video-container" style="position: relative; display: inline-block;">
+            <img 
+              id="thumbnail" 
+              src="https://res.cloudinary.com/dwowwkm2l/image/upload/v1752580785/iSA_W7gWkNs-HQ_qjwjtf.jpg" 
+              alt="Doctor Thumbnail" 
+              style="width: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); cursor: pointer;"
+              onclick="playVideo()"
+            />
+            <div 
+              onclick="playVideo()"
+              style="
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 80px;
+                height: 80px;
+                background: rgba(0, 0, 0, 0.6);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+              "
+            >
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </div>
           </div>
         </div>
       </div>
+      
+      <script>
+      function playVideo() {
+        const container = document.getElementById('video-container');
+        container.innerHTML = `
+          <iframe
+            src="https://player.cloudinary.com/embed/?cloud_name=dwowwkm2l&public_id=Dr._Siddhartha_Chakravarthy_Consultant_-_Surgical_Oncology_Apollo_Cancer_Centres_Hyderabad._-_Apollo_Cancer_Centres_1080p_h264_glnozs&profile=cld-adaptive-stream&autoplay=true"
+            width="150%"
+            height="360"
+            style="border-radius: 10px; border: none;"
+            allow="autoplay; fullscreen"
+            allowfullscreen
+          ></iframe>
+        `;
+      }
+      </script>
+      
       <div class="col-lg-6">
         <div class="about4-heading heading4">
           <h5 class="vl-section-subtitle" data-aos="fade-left" data-aos-duration="800">Thyroidcentre<span> | </span>
@@ -227,218 +267,54 @@
         <div class="service4-slider-area owl-carousel">
           <div class="service4-boxarea">
             <div class="content-area">
-              <a href="service-single.html" class="title">4 scarless thyroidectomy</a>
-              <div class="space16"></div>
-              <p>Specializing in the diagnosis and treatment of heart-related conditions.</p>
+              <a href="{{ url_for('scarless_thyroidectomy') }}" class="title" style="font-size: 19px;">4 scarless thyroidectomy</a>
               <div class="space24"></div>
-              <a href="service-single.html" class="readmore">
-                Learn More
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <g clip-path="url(#clip0_5927_10805)">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M7.99992 0.833008C4.04188 0.833008 0.833252 4.04163 0.833252 7.99967C0.833252 11.9577 4.04188 15.1663 7.99992 15.1663C11.958 15.1663 15.1666 11.9577 15.1666 7.99967C15.1666 4.04163 11.958 0.833008 7.99992 0.833008ZM7.33325 5.33301C7.06359 5.33301 6.82052 5.49543 6.71732 5.74455C6.61415 5.99367 6.67119 6.28042 6.86185 6.47108L7.72379 7.33301L5.52851 9.52827C5.26817 9.78861 5.26817 10.2107 5.52851 10.4711C5.78887 10.7314 6.21097 10.7314 6.47133 10.4711L8.66659 8.27581L9.52852 9.13774C9.71919 9.32841 10.0059 9.38547 10.2551 9.28227C10.5042 9.17907 10.6666 8.93601 10.6666 8.66634V5.99967C10.6666 5.63149 10.3681 5.33301 9.99992 5.33301H7.33325Z"
-                      fill="#4416FF" />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_5927_10805">
-                      <rect width="16" height="16" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
-              </a>
-            </div>
-
-            <div class="img1 image-anime">
-              <img src="{{ url_for('static', filename='assets/img/all-images/service/service-img17.png') }}" alt="">
             </div>
           </div>
           <div class="service4-boxarea">
             <div class="content-area">
-              <a href="service-single.html" class="title">Goiter</a>
-              <div class="space16"></div>
-              <p>Specializing in the diagnosis and treatment of heart-related conditions.</p>
+              <a href="{{ url_for('goiter') }}" class="title">Goiter</a>
               <div class="space24"></div>
-              <a href="service-single.html" class="readmore">
-                Learn More
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <g clip-path="url(#clip0_5927_10805)">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M7.99992 0.833008C4.04188 0.833008 0.833252 4.04163 0.833252 7.99967C0.833252 11.9577 4.04188 15.1663 7.99992 15.1663C11.958 15.1663 15.1666 11.9577 15.1666 7.99967C15.1666 4.04163 11.958 0.833008 7.99992 0.833008ZM7.33325 5.33301C7.06359 5.33301 6.82052 5.49543 6.71732 5.74455C6.61415 5.99367 6.67119 6.28042 6.86185 6.47108L7.72379 7.33301L5.52851 9.52827C5.26817 9.78861 5.26817 10.2107 5.52851 10.4711C5.78887 10.7314 6.21097 10.7314 6.47133 10.4711L8.66659 8.27581L9.52852 9.13774C9.71919 9.32841 10.0059 9.38547 10.2551 9.28227C10.5042 9.17907 10.6666 8.93601 10.6666 8.66634V5.99967C10.6666 5.63149 10.3681 5.33301 9.99992 5.33301H7.33325Z"
-                      fill="#4416FF" />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_5927_10805">
-                      <rect width="16" height="16" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
-              </a>
-            </div>
-
-            <div class="img1 image-anime">
-              <img src="{{ url_for('static', filename='assets/img/all-images/service/service-img17.png') }}" alt="">
             </div>
           </div>
           <div class="service4-boxarea">
             <div class="content-area">
-              <a href="service-single.html" class="title">Graves</a>
-              <div class="space16"></div>
-              <p>Specializing in the diagnosis and treatment of heart-related conditions.</p>
+              <a href="{{ url_for('graves') }}" class="title">Graves</a>
               <div class="space24"></div>
-              <a href="service-single.html" class="readmore">
-                Learn More
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <g clip-path="url(#clip0_5927_10805)">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M7.99992 0.833008C4.04188 0.833008 0.833252 4.04163 0.833252 7.99967C0.833252 11.9577 4.04188 15.1663 7.99992 15.1663C11.958 15.1663 15.1666 11.9577 15.1666 7.99967C15.1666 4.04163 11.958 0.833008 7.99992 0.833008ZM7.33325 5.33301C7.06359 5.33301 6.82052 5.49543 6.71732 5.74455C6.61415 5.99367 6.67119 6.28042 6.86185 6.47108L7.72379 7.33301L5.52851 9.52827C5.26817 9.78861 5.26817 10.2107 5.52851 10.4711C5.78887 10.7314 6.21097 10.7314 6.47133 10.4711L8.66659 8.27581L9.52852 9.13774C9.71919 9.32841 10.0059 9.38547 10.2551 9.28227C10.5042 9.17907 10.6666 8.93601 10.6666 8.66634V5.99967C10.6666 5.63149 10.3681 5.33301 9.99992 5.33301H7.33325Z"
-                      fill="#4416FF" />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_5927_10805">
-                      <rect width="16" height="16" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
-              </a>
-            </div>
-
-            <div class="img1 image-anime">
-              <img src="{{ url_for('static', filename='assets/img/all-images/service/service-img17.png') }}" alt="">
             </div>
           </div>
           <div class="service4-boxarea">
             <div class="content-area">
-              <a href="service-single.html" class="title">Hyperparathyroidism</a>
-              <div class="space16"></div>
-              <p>Specializing in the diagnosis and treatment of heart-related conditions.</p>
+              <a href="{{ url_for('hyperparathyroidism') }}" class="title">Hyperparathyroidism</a>
               <div class="space24"></div>
-              <a href="service-single.html" class="readmore">
-                Learn More
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <g clip-path="url(#clip0_5927_10805)">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M7.99992 0.833008C4.04188 0.833008 0.833252 4.04163 0.833252 7.99967C0.833252 11.9577 4.04188 15.1663 7.99992 15.1663C11.958 15.1663 15.1666 11.9577 15.1666 7.99967C15.1666 4.04163 11.958 0.833008 7.99992 0.833008ZM7.33325 5.33301C7.06359 5.33301 6.82052 5.49543 6.71732 5.74455C6.61415 5.99367 6.67119 6.28042 6.86185 6.47108L7.72379 7.33301L5.52851 9.52827C5.26817 9.78861 5.26817 10.2107 5.52851 10.4711C5.78887 10.7314 6.21097 10.7314 6.47133 10.4711L8.66659 8.27581L9.52852 9.13774C9.71919 9.32841 10.0059 9.38547 10.2551 9.28227C10.5042 9.17907 10.6666 8.93601 10.6666 8.66634V5.99967C10.6666 5.63149 10.3681 5.33301 9.99992 5.33301H7.33325Z"
-                      fill="#4416FF" />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_5927_10805">
-                      <rect width="16" height="16" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
-              </a>
-            </div>
-
-            <div class="img1 image-anime">
-              <img src="{{ url_for('static', filename='assets/img/all-images/service/service-img17.png') }}" alt="">
             </div>
           </div>
           <div class="service4-boxarea">
             <div class="content-area">
-              <a href="service-single.html" class="title">Microwave and radiofrequency ablation</a>
-              <div class="space16"></div>
-              <p>Specializing in the diagnosis and treatment of heart-related conditions.</p>
+              <a href="{{ url_for('microwave_and_radiofrequency_ablation') }}" class="title " style="font-size: 17px;">Microwave & radiofrequency ablation</a>
               <div class="space24"></div>
-              <a href="service-single.html" class="readmore">
-                Learn More
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <g clip-path="url(#clip0_5927_10805)">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M7.99992 0.833008C4.04188 0.833008 0.833252 4.04163 0.833252 7.99967C0.833252 11.9577 4.04188 15.1663 7.99992 15.1663C11.958 15.1663 15.1666 11.9577 15.1666 7.99967C15.1666 4.04163 11.958 0.833008 7.99992 0.833008ZM7.33325 5.33301C7.06359 5.33301 6.82052 5.49543 6.71732 5.74455C6.61415 5.99367 6.67119 6.28042 6.86185 6.47108L7.72379 7.33301L5.52851 9.52827C5.26817 9.78861 5.26817 10.2107 5.52851 10.4711C5.78887 10.7314 6.21097 10.7314 6.47133 10.4711L8.66659 8.27581L9.52852 9.13774C9.71919 9.32841 10.0059 9.38547 10.2551 9.28227C10.5042 9.17907 10.6666 8.93601 10.6666 8.66634V5.99967C10.6666 5.63149 10.3681 5.33301 9.99992 5.33301H7.33325Z"
-                      fill="#4416FF" />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_5927_10805">
-                      <rect width="16" height="16" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
-              </a>
-            </div>
-
-            <div class="img1 image-anime">
-              <img src="{{ url_for('static', filename='assets/img/all-images/service/service-img17.png') }}" alt="">
             </div>
           </div>
           <div class="service4-boxarea">
             <div class="content-area">
-              <a href="service-single.html" class="title">Thyroid cancer</a>
+              <a href="{{ url_for('thyroid_cancer') }}" class="title">Thyroid cancer</a>
               <div class="space16"></div>
-              <p>Specializing in the diagnosis and treatment of heart-related conditions.</p>
               <div class="space24"></div>
-              <a href="service-single.html" class="readmore">
-                Learn More
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <g clip-path="url(#clip0_5927_10805)">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M7.99992 0.833008C4.04188 0.833008 0.833252 4.04163 0.833252 7.99967C0.833252 11.9577 4.04188 15.1663 7.99992 15.1663C11.958 15.1663 15.1666 11.9577 15.1666 7.99967C15.1666 4.04163 11.958 0.833008 7.99992 0.833008ZM7.33325 5.33301C7.06359 5.33301 6.82052 5.49543 6.71732 5.74455C6.61415 5.99367 6.67119 6.28042 6.86185 6.47108L7.72379 7.33301L5.52851 9.52827C5.26817 9.78861 5.26817 10.2107 5.52851 10.4711C5.78887 10.7314 6.21097 10.7314 6.47133 10.4711L8.66659 8.27581L9.52852 9.13774C9.71919 9.32841 10.0059 9.38547 10.2551 9.28227C10.5042 9.17907 10.6666 8.93601 10.6666 8.66634V5.99967C10.6666 5.63149 10.3681 5.33301 9.99992 5.33301H7.33325Z"
-                      fill="#4416FF" />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_5927_10805">
-                      <rect width="16" height="16" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
-              </a>
-            </div>
-
-            <div class="img1 image-anime">
-              <img src="{{ url_for('static', filename='assets/img/all-images/service/service-img17.png') }}" alt="">
             </div>
           </div>
           <div class="service4-boxarea">
             <div class="content-area">
-              <a href="service-single.html" class="title">Thyroid surgery</a>
+              <a href="{{ url_for('thyroid_surgery') }}" class="title">Thyroid surgery</a>
               <div class="space16"></div>
-              <p>Specializing in the diagnosis and treatment of heart-related conditions.</p>
-              <div class="space24"></div>
-              <a href="service-single.html" class="readmore">
-                Learn More
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <g clip-path="url(#clip0_5927_10805)">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M7.99992 0.833008C4.04188 0.833008 0.833252 4.04163 0.833252 7.99967C0.833252 11.9577 4.04188 15.1663 7.99992 15.1663C11.958 15.1663 15.1666 11.9577 15.1666 7.99967C15.1666 4.04163 11.958 0.833008 7.99992 0.833008ZM7.33325 5.33301C7.06359 5.33301 6.82052 5.49543 6.71732 5.74455C6.61415 5.99367 6.67119 6.28042 6.86185 6.47108L7.72379 7.33301L5.52851 9.52827C5.26817 9.78861 5.26817 10.2107 5.52851 10.4711C5.78887 10.7314 6.21097 10.7314 6.47133 10.4711L8.66659 8.27581L9.52852 9.13774C9.71919 9.32841 10.0059 9.38547 10.2551 9.28227C10.5042 9.17907 10.6666 8.93601 10.6666 8.66634V5.99967C10.6666 5.63149 10.3681 5.33301 9.99992 5.33301H7.33325Z"
-                      fill="#4416FF" />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_5927_10805">
-                      <rect width="16" height="16" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
-              </a>
-            </div>
 
-            <div class="img1 image-anime">
-              <img src="{{ url_for('static', filename='assets/img/all-images/service/service-img17.png') }}" alt="">
+              <div class="space24"></div>
             </div>
           </div>
           <div class="service4-boxarea">
             <div class="content-area">
-              <a href="service-single.html" class="title">Toxic nodule</a>
+              <a href="{{ url_for('toxic_nodule') }}" class="title text-center">Toxic nodule</a>
               <div class="space16"></div>
-              <p>Specializing in the diagnosis and treatment of heart-related conditions.</p>
               <div class="space24"></div>
-              <a href="service-single.html" class="readmore">
-                Learn More
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <g clip-path="url(#clip0_5927_10805)">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M7.99992 0.833008C4.04188 0.833008 0.833252 4.04163 0.833252 7.99967C0.833252 11.9577 4.04188 15.1663 7.99992 15.1663C11.958 15.1663 15.1666 11.9577 15.1666 7.99967C15.1666 4.04163 11.958 0.833008 7.99992 0.833008ZM7.33325 5.33301C7.06359 5.33301 6.82052 5.49543 6.71732 5.74455C6.61415 5.99367 6.67119 6.28042 6.86185 6.47108L7.72379 7.33301L5.52851 9.52827C5.26817 9.78861 5.26817 10.2107 5.52851 10.4711C5.78887 10.7314 6.21097 10.7314 6.47133 10.4711L8.66659 8.27581L9.52852 9.13774C9.71919 9.32841 10.0059 9.38547 10.2551 9.28227C10.5042 9.17907 10.6666 8.93601 10.6666 8.66634V5.99967C10.6666 5.63149 10.3681 5.33301 9.99992 5.33301H7.33325Z"
-                      fill="#4416FF" />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_5927_10805">
-                      <rect width="16" height="16" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
-              </a>
-            </div>
-
-            <div class="img1 image-anime">
-              <img src="{{ url_for('static', filename='assets/img/all-images/service/service-img17.png') }}" alt="">
             </div>
           </div>
         </div>
@@ -489,9 +365,6 @@
                   <p>We prioritize compassionate and personalized thyroid care, ensuring that every patient feels
                     supported, understood, and well-guided throughout their treatment journey.</p>
                   <div class="space28"></div>
-                  <a href="service-single.html" class="readmore">Learn More
-                    <!-- SVG remains same -->
-                  </a>
                 </div>
               </div>
             </div>
@@ -504,12 +377,7 @@
                 <div class="content-area">
                   <a href="service-single.html" class="title">Expert Thyroid Specialists</a>
                   <div class="space16"></div>
-                  <p>Our team consists of highly experienced endocrinologists and thyroid experts dedicated to
-                    delivering the highest quality of specialized care.</p>
                   <div class="space28"></div>
-                  <a href="service-single.html" class="readmore">Learn More
-                    <!-- SVG remains same -->
-                  </a>
                 </div>
               </div>
             </div>
@@ -525,9 +393,6 @@
                   <p>Your health and comfort are at the heart of everything we do. We partner with you to create
                     personalized thyroid care plans for the best outcomes.</p>
                   <div class="space28"></div>
-                  <a href="service-single.html" class="readmore">Learn More
-                    <!-- SVG remains same -->
-                  </a>
                 </div>
               </div>
             </div>
@@ -543,9 +408,6 @@
                   <p>We use advanced diagnostic tools and modern medical technologies to ensure precise thyroid
                     evaluations and effective treatments.</p>
                   <div class="space28"></div>
-                  <a href="service-single.html" class="readmore">Learn More
-                    <!-- SVG remains same -->
-                  </a>
                 </div>
               </div>
             </div>
@@ -1050,7 +912,7 @@
       <div class="col-lg-12" data-aos="zoom-out" data-aos-duration="1200">
         <div class="cs_case_study_1_list">
           <div class="cs_case_study cs_style_1 cs_hover_active active" data-aos="fade-up" data-aos-duration="800">
-            <a href="case-single.html" class="cs_case_study_thumb cs_bg_filed"
+            <a href="javascript:void(0);" class="cs_case_study_thumb cs_bg_filed"
               data-src="assets/img/all-images/works/work-img10.png"></a>
             <div class="content-area1">
               <div class="arrow">
@@ -1072,19 +934,19 @@
                 weekends and evenings.</p>
               <div class="space30"></div>
               <div class="img1">
-                <img src="{{ url_for('static', filename='assets/img/all-images/works/work-img10.png') }} " alt="">
+                <img src="https://res.cloudinary.com/dwowwkm2l/image/upload/v1752582964/doctor-patient_1_1_uelqib.jpg" alt="">
               </div>
             </div>
           </div>
           <div class="cs_case_study cs_style_1 box2 cs_hover_active" data-aos="fade-up" data-aos-duration="900">
-            <a href="case-single.html" class="cs_case_study_thumb cs_case_study_thumb2 cs_bg_filed"
+            <a href="javascript:void(0);" class="cs_case_study_thumb cs_case_study_thumb2 cs_bg_filed"
               data-src="assets/img/all-images/case/case-img2.png"></a>
             <div class="content-area1">
               <div class="arrow">
                 <a href="#">2</a>
               </div>
               <div class="text">
-                <a href="case-single.html">Consultation & Diagnosis</a>
+                <a href="javascript:void(0);">Consultation & Diagnosis</a>
               </div>
             </div>
             <div class="content-area">
@@ -1092,26 +954,26 @@
                 <a href="#">2</a>
               </div>
               <div class="space32"></div>
-              <a href="case-single.html" class="head">Consultation & Diagnosis</a>
+              <a href="javascript:void(0);" class="head">Consultation & Diagnosis</a>
               <div class="space16"></div>
               <p>Meet with our thyroid specialists to discuss your symptoms, medical history, and undergo comprehensive
                 testing. We use advanced diagnostics, including thyroid function tests, ultrasound, and fine-needle
                 aspiration when necessary.</p>
               <div class="space30"></div>
               <div class="img1">
-                <img src="{{ url_for('static', filename='assets/img/all-images/works/work-img10.png') }} " alt="">
+                <img src="https://res.cloudinary.com/dwowwkm2l/image/upload/v1752583165/llyztlgb3y5q8mlp4bl9c9d1Azh8flx43khzyn8thcA8c0ngflqv301h0mgvq4w1vj4s42f93Avhg7ksckmsp2cd1t4gfrv0p5fhz678fzwmzzh8xdrwcjq8bz7jjd1h7pwlhhdwg20m309g48hm2qrv941r4mvqjq0w0A9lhr6h1tj22yrq_ynuzhg.jpg" alt="">
               </div>
             </div>
           </div>
           <div class="cs_case_study cs_style_1 box3 cs_hover_active" data-aos="fade-up" data-aos-duration="1000">
-            <a href="case-single.html" class="cs_case_study_thumb cs_case_study_thumb3 cs_bg_filed"
+            <a href="javascript:void(0);" class="cs_case_study_thumb cs_case_study_thumb3 cs_bg_filed"
               data-src="assets/img/all-images/case/case-img3.png"></a>
             <div class="content-area1">
               <div class="arrow">
                 <a href="#">3</a>
               </div>
               <div class="text">
-                <a href="case-single.html">Personalized Treatment</a>
+                <a href="javascript:void(0);">Personalized Treatment</a>
               </div>
             </div>
             <div class="content-area">
@@ -1119,26 +981,26 @@
                 <a href="#">3</a>
               </div>
               <div class="space32"></div>
-              <a href="case-single.html" class="head">Personalized Treatment</a>
+              <a href="javascript:void(0);" class="head">Personalized Treatment</a>
               <div class="space16"></div>
               <p>Receive a customized treatment plan based on your diagnosis. Whether it's medication management,
                 lifestyle changes, surgery, or radioactive iodine therapy, we ensure the best possible outcome for your
                 thyroid health.</p>
               <div class="space30"></div>
               <div class="img1">
-                <img src="{{ url_for('static', filename='assets/img/all-images/works/work-img10.png') }} " alt="">
+                <img src="https://res.cloudinary.com/dwowwkm2l/image/upload/v1752583754/woman-patient-receives-thyroid-diagnostics-treatment-thyrotoxicosis-hypothyroidism-ultrasound-diagnostics-endocrine-system-thyroid_1_1_qxgzhp.jpg" alt="">
               </div>
             </div>
           </div>
           <div class="cs_case_study cs_style_1 box4 cs_hover_active" data-aos="fade-up" data-aos-duration="1100">
-            <a href="case-single.html" class="cs_case_study_thumb cs_case_study_thumb4 cs_bg_filed"
+            <a href="javascript:void(0);" class="cs_case_study_thumb cs_case_study_thumb4 cs_bg_filed"
               data-src="assets/img/all-images/case/case-img4.png"></a>
             <div class="content-area1">
               <div class="arrow">
                 <a href="#">4</a>
               </div>
               <div class="text">
-                <a href="case-single.html">Ongoing Care</a>
+                <a href="javascript:void(0);">Ongoing Care</a>
               </div>
             </div>
             <div class="content-area">
@@ -1146,14 +1008,14 @@
                 <a href="#">4</a>
               </div>
               <div class="space32"></div>
-              <a href="case-single.html" class="head">Ongoing Care</a>
+              <a href="javascript:void(0);" class="head">Ongoing Care</a>
               <div class="space16"></div>
               <p>Thyroid management is a long-term journey. Our team provides regular follow-ups, adjustments in
                 treatment, and continuous support to ensure your thyroid levels remain balanced and your health is
                 maintained.</p>
               <div class="space30"></div>
               <div class="img1">
-                <img src="{{ url_for('static', filename='assets/img/all-images/works/work-img10.png') }} " alt="">
+                <img src="https://res.cloudinary.com/dwowwkm2l/image/upload/v1752584131/endocrinologist-examining-throat-young-woman-clinic-women-with-thyroid-gland-test-endocrinology-hormones-treatment-inflammation-sore-throat_1_1_kdircw.jpg" alt="">
               </div>
             </div>
           </div>
@@ -1261,7 +1123,7 @@
       <div class="col-lg-3"></div>
       <div class="col-lg-4">
         <div class="cta-circle-area">
-
+          
         </div>
       </div>
     </div>

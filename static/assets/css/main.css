@@ -1,70 +1,4 @@
-/*-----------------------------------------------------------------------------------
 
-Name:  Medicax- Health & Medical HTML Template
-Version: 1.0.0
-Description: Medicax- Health & Medical HTML Template
-Author: Vikiglab
-Author URI: https://themeforest.net/user/vikinglab/portfolio
-Location:
------------------------------------------------------------------------------------
-
-/************ TABLE OF CONTENTS ***************
-
-	-----------------
-    01 THEME CSS
-	-----------------
-		 Theme Default
-		 Common Classes
-		 Default Spacing
-
-	-----------------
-     02 COMPONENTS css
-	-----------------
-		 ABOUT CSS AREA
-		 MOBILE MENU CSS AREA
-		 SERVICE CSS AREA
-         HERO CSS AREA
-	----------------- 
-     03 LAYOUT CSS 
-	----------------- 
-		 PAGES 
-		 BLOG 
-		 HEADER 
-		 FOOTER 
-		 MENU 
-
-    --------------------------------- 
-	 04. MENU CSS 
-	---------------------------------
-       HEADER CSS AREA  
-
-	---------------------------------  
-	 05 BLOG CSS 
-	---------------------------------  
-       BLOG CSS AREA 
-
-	---------------------------------  
-	 06. FOOTER CSS 
-	---------------------------------  
-      FOOTER CSS AREA 
-
-	---------------------------------   
-	 07. PAGES CSS  
-	---------------------------------   
-       CHOOSE CSS AREA  
-       CONTACT CSS AREA   
-       CTA CSS AREA  
-       FAQ CSS AREA  
-       OTHERS CSS AREA STARTS  
-       PRICING CSS AREA  
-       PROEJCTS CSS AREA STARTS  
-       SKILLS CSS AREA STARTS 
-       TEAM CSS AREA 
-       TESTIMONIAL CSS AREA
-       WORK CSS AREA 
-       CASE STUDY CSS 
-
-**********************************************/
 @import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&amp;family=Outfit:wght@100..900&amp;display=swap");
 a, a:hover {
   text-decoration: none;
@@ -2942,7 +2876,7 @@ body {
   transition: all 0.4s;
 }
 .service4-section-area .service4-slider-area .service4-boxarea .content-area {
-  padding: 24px 16px;
+  padding: 24px 36px;
 }
 .service4-section-area .service4-slider-area .service4-boxarea .content-area .title {
   color: var(--ztc-text-text-11);
